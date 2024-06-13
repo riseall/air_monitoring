@@ -8,8 +8,8 @@
                     <div class="flex-none w-2/3 max-w-full px-3">
                         <div>
                             <p class="mb-0 font-bold text-sm text-slate-800">Carbon Dioxide</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                34.333
+                            <h5 id="co2-data" class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->co2 }}
                                 <span class="text-sm leading-normal font-weight-bolder text-lime-500">ppm</span>
                             </h5>
                         </div>
@@ -33,8 +33,9 @@
                     <div class="flex-none w-2/3 max-w-full pl-3 pr-1">
                         <div>
                             <p class="mb-0 font-bold text-sm text-slate-800">Nitrogen Dioxide</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                2,300
+                            <h5 id="no2-data"
+                                class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->no2 }}
                                 <span class="text-sm leading-normal font-weight-bolder text-lime-500">ppm</span>
                             </h5>
                         </div>
@@ -58,8 +59,9 @@
                     <div class="flex-none w-2/3 max-w-full pl-3">
                         <div>
                             <p class="mb-0 font-bold text-sm text-slate-800">Carbon Monoxide</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                +3,462
+                            <h5 id="co-data"
+                                class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->co }}
                                 <span class="text-sm leading-normal text-lime-500 font-weight-bolder">ppm</span>
                             </h5>
                         </div>
@@ -83,8 +85,9 @@
                     <div class="flex-none w-2/3 max-w-full px-3">
                         <div>
                             <p class="mb-0 font-bold text-slate-800">Benzene</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                3,462
+                            <h5 id="bzn-data"
+                                class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->benzene }}
                                 <span class="text-sm leading-normal text-lime-500 font-weight-bolder">ppm</span>
                             </h5>
                         </div>
@@ -108,8 +111,9 @@
                     <div class="flex-none w-2/3 max-w-full px-3">
                         <div>
                             <p class="mb-0 font-bold text-slate-800">Toluene</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                3,462
+                            <h5 id="tln-data"
+                                class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->toluene }}
                                 <span class="text-sm leading-normal text-lime-500 font-weight-bolder">ppm</span>
                             </h5>
                         </div>
@@ -136,8 +140,9 @@
                     <div class="flex-none w-2/3 max-w-full px-3">
                         <div>
                             <p class="mb-0 font-bold text-slate-800">PM2.5</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                3,462
+                            <h5 id="pm-data"
+                                class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->pm25 }}
                                 <span
                                     class="text-sm leading-normal text-lime-500 font-weight-bolder">ug/m<sup>3</sup></span>
                             </h5>
@@ -162,8 +167,9 @@
                     <div class="flex-none w-2/3 max-w-full px-3">
                         <div>
                             <p class="mb-0 font-bold text-slate-800">Temperature</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                3,462
+                            <h5 id="tp-data"
+                                class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->temperature }}
                                 <span
                                     class="text-sm leading-normal text-lime-500 font-weight-bolder"><sup>o</sup>C</span>
                             </h5>
@@ -188,8 +194,9 @@
                     <div class="flex-none w-2/3 max-w-full px-3">
                         <div>
                             <p class="mb-0 font-bold text-slate-800">Humidity</p>
-                            <h5 class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
-                                3,462
+                            <h5 id="hm-data"
+                                class="mb-0 font-sans text-sm font-semibold leading-normal text-slate-400">
+                                {{ $data->humidity }}
                                 <span class="text-sm leading-normal text-lime-500 font-weight-bolder">%</span>
                             </h5>
                         </div>
@@ -205,3 +212,8 @@
         </div>
     </div>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var dataBaruUrl = "{{ route('data') }}";
+</script>
+<Script src="./assets/js/realtimedata.js"></Script>
