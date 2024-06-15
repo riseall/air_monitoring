@@ -26,8 +26,8 @@ class SensorData extends Model
 
     protected $dates = ['tanggal'];
 
-    public function getTanggalAttribute($value)
-    {
-        return Carbon::parse($value)->translatedFormat('l, d F Y H:i:s');
-    }
+    // public function getTanggalAttribute($value)
+    // {
+    //     return Carbon::parse($value)->translatedFormat('l, d F Y H:i:s');
+    // }
 }
