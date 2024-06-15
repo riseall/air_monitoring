@@ -215,4 +215,3 @@
 <script>
     var dataBaruUrl = "{{ route('data') }}";
 </script>
-<Script src="./assets/js/realtimedata.js"></Script>
