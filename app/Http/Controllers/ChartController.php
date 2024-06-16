@@ -49,7 +49,7 @@ class ChartController extends Controller
     {
         $sensorData = SensorData::select('created_at', $parameter)
             ->orderBy('created_at', 'desc')
-            ->limit(1080)
+            ->limit(30)
             ->get()
             ->reverse(); // Membalikkan urutan data agar data terbaru berada di paling bawah
 
