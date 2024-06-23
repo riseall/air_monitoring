@@ -1,5 +1,4 @@
 // chart 2
-
 $(document).ready(function () {
     function fetchData(parameter) {
         console.log("Fetching data for parameter:", parameter);
