@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
     <link rel="icon" type="image/png" href="./assets/img/air-quality.png" />
     <title>Air Quality - Monitoring</title>
-    @vite(['resources/css/app.css', 'resources/css/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js', 'resources/js/bootstrap.js'])
     @include('layout.partial.link')
 </head>
 
