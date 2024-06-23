@@ -7,15 +7,21 @@ use App\Models\SensorData;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Yajra\DataTables\DataTables;
 
 class SensorDataController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $data = SensorData::all();
+        if ($request->ajax()) {
+            $data = SensorData::select('*');
+            return datatables()->of($data)
+                ->make(true);
+        }
 
-        return response()->json($data, 201);
+        return view('table');
     }
+
 
     public function newData()
     {

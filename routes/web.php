@@ -7,15 +7,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('test');
-});
+})->middleware(['auth', 'verified'])->name('dashboard');;
 
 Route::get('/tabel', function () {
     return view('table');
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -23,7 +19,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/', [SensorDataController::class, 'newData'])->name('data');
+Route::get('/data', [SensorDataController::class, 'index'])->name('data');
+Route::get('/', [SensorDataController::class, 'newData'])->name('new.data');
 Route::get('/chart1/data', [ChartController::class, 'getBar'])->name('chart1.data');
 Route::get('/chart/data', [ChartController::class, 'getData'])->name('chart.data');
 
