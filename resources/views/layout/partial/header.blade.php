@@ -14,11 +14,11 @@
 
         <hr class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
 
-        <div class="items-center block w-auto max-h-screen h-sidenav grow basis-full">
+        <div class="sidebar items-center block w-auto max-h-screen h-sidenav grow basis-full">
             <ul class="flex flex-col pl-0 mb-0">
                 <li class="mt-0.5 w-full">
                     <a class="group py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap transition-colors px-4 hover:px-4 hover:transition hover:shadow-lg hover:rounded-lg hover:bg-white hover:font-semibold hover:text-slate-700 hover:ease-in-out hover:duration-100"
-                        href="/">
+                        href="/" data-page="Dashboard">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
                             <i class="fa fa-home text-xs text-slate-800 group-hover:text-white"></i>
@@ -29,7 +29,7 @@
 
                 <li class="mt-0.5 w-full">
                     <a class="group py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap transition-colors px-4 hover:px-4 hover:transition hover:shadow-lg hover:rounded-lg hover:bg-white hover:font-semibold hover:text-slate-700 hover:ease-in-out hover:duration-100"
-                        href="/tabel">
+                        href="/tabel" data-page="Tabel">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
                             <i class="fa fa-table text-xs text-slate-800 group-hover:text-white"></i>
@@ -44,7 +44,7 @@
 
                 <li class="mt-0.5 w-full">
                     <a class="group py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap transition-colors px-4 hover:px-4 hover:transition hover:shadow-lg hover:rounded-lg hover:bg-white hover:font-semibold hover:text-slate-700 hover:ease-in-out hover:duration-100"
-                        href="./pages/profile.html">
+                        href="./pages/profile.html" data-page="Profile">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
                             <i class="text-xs text-slate-800 group-hover:text-white fa fa-user" aria-hidden="true"></i>
@@ -89,14 +89,15 @@
             <div class="flex items-center justify-between w-full px-4 py-1 mx-auto flex-wrap-inherit">
                 <nav>
                     <!-- breadcrumb -->
-                    <ol class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
+                    <ol id="breadcrumb" class="flex flex-wrap pt-1 mr-12 bg-transparent rounded-lg sm:mr-16">
                         <li class="text-sm leading-normal">
-                            <a class="opacity-50 text-slate-700" href="javascript:;">Pages</a>
+                            <a class="opacity-50 text-slate-700" href="#">Pages</a>
                         </li>
-                        <li class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']"
+                        <li id="current-page"
+                            class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']"
                             aria-current="page">Dashboard</li>
                     </ol>
-                    <h6 class="mb-0 font-bold capitalize">Dashboard</h6>
+                    <h6 id="title-page" class="mb-0 font-bold capitalize" aria-current="page">Dashboard</h6>
                 </nav>
 
                 <div class="flex items-center mt-2 grow sm:mt-0 sm:mr-6 md:mr-0 lg:flex lg:basis-auto">
