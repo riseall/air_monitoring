@@ -22,6 +22,8 @@ return new class extends Migration
             $table->decimal('pm25', 8, 2);
             $table->decimal('humidity', 8, 2);
             $table->decimal('temperature', 8, 2);
+            $table->float('aqi')->nullable();
+            $table->string('category')->nullable();
             $table->timestamps();
         });
     }
