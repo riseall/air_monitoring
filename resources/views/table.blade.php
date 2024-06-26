@@ -42,11 +42,8 @@
                 ajax: "{{ url('data') }}",
                 responsive: true,
                 columns: [{
-                        data: null, // Kolom untuk nomor urut
-                        name: "id",
-                        render: function(data, type, row, meta) {
-                            return meta.row + 1; // Menampilkan nomor urut berdasarkan indeks baris
-                        },
+                        data: "id",
+                        name: "id"
                     },
                     {
                         data: "tanggal",
@@ -85,18 +82,6 @@
                         name: "humidity"
                     },
                 ],
-                drawCallback: function(settings) {
-                    var api = this.api();
-                    var startIndex = api.context[0]._iDisplayStart;
-
-                    api.column(0, {
-                            page: "current"
-                        })
-                        .nodes()
-                        .each(function(cell, i) {
-                            cell.innerHTML = startIndex + i + 1;
-                        });
-                },
             });
         });
     </script>

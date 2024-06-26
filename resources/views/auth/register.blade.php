@@ -9,10 +9,21 @@
                 <div class="w-full max-w-full px-3 mx-auto mt-0 md:flex-0 shrink-0 md:w-6/12 lg:w-5/12 xl:w-4/12">
                     <div
                         class="relative z-0 flex flex-col break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border">
-                        <div class="flex-auto p-6">
-                            <div class="p-6 mb-0 text-center bg-white border-b-0 rounded-t-2xl">
-                                <h5>Sign Up</h5>
+                        <div class="flex p-4 py-6 items-center justify-center gap-1">
+                            <img src="./assets/img/air-quality.png" width="43" height="33" alt="airquality">
+                            <div class="flex flex-col">
+                                <span class="font-bold text-lg -mb-2.5 ">Air Quality</span>
+                                <span class="text-center text-sm font-mono font-extralight">Monitoring</span>
                             </div>
+                        </div>
+                        <div class="p-6 pb-0 pt-1 bg-transparent border-b-0 rounded-t-2xl text-sm">
+                            <h3
+                                class="relative z-10 font-bold text-transparent bg-gradient-to-tl from-slate-800 to-gray-600 bg-clip-text">
+                                Let's Start
+                            </h3>
+                            <p class="mb-0">Create an Account</p>
+                        </div>
+                        <div class="flex-auto p-6">
                             <form role="form text-left" method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="mb-4">

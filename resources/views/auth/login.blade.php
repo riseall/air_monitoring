@@ -11,7 +11,14 @@
                     <div class="w-full max-w-full px-3 mx-auto md:flex-0 shrink-0 md:w-6/12 lg:w-5/12 xl:w-4/12">
                         <div
                             class="relative bg-white flex flex-col min-w-0 break-words bg-transparent border-0 shadow-none rounded-2xl bg-clip-border">
-                            <div class="p-6 pb-0 mb-0 bg-transparent border-b-0 rounded-t-2xl">
+                            <div class="flex p-4 py-6 items-center justify-center gap-1">
+                                <img src="./assets/img/air-quality.png" width="43" height="33" alt="airquality">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-lg -mb-2.5 ">Air Quality</span>
+                                    <span class="text-center text-sm font-mono font-extralight">Monitoring</span>
+                                </div>
+                            </div>
+                            <div class="p-6 pb-0 pt-1 bg-transparent border-b-0 rounded-t-2xl text-sm">
                                 <h3
                                     class="relative z-10 font-bold text-transparent bg-gradient-to-tl from-blue-600 to-cyan-400 bg-clip-text">
                                     Welcome back</h3>
