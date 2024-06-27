@@ -30,6 +30,6 @@ Route::get('/chart1/data', [ChartController::class, 'getBar'])->name('chart1.dat
 Route::get('/chart/data', [ChartController::class, 'getData'])->name('chart.data');
 
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
-Route::get('/news/search', [NewsController::class, 'search'])->name('news.search');
+Route::get('/news/news', [NewsController::class, 'search'])->name('news.search');
 
 require __DIR__ . '/auth.php';
