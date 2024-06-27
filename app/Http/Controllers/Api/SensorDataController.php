@@ -22,7 +22,6 @@ class SensorDataController extends Controller
         return view('table');
     }
 
-
     public function newData()
     {
         $data = SensorData::latest('id')->first(); // Mengambil semua data sensor terbaru

@@ -21,13 +21,15 @@ class SensorData extends Model
         'toluene',
         'pm25',
         'temperature',
-        'humidity'
+        'humidity',
+        'aqi',
+        'category'
     ];
 
     protected $dates = ['tanggal'];
 
-    // public function getTanggalAttribute($value)
-    // {
-    //     return Carbon::parse($value)->translatedFormat('l, d F Y H:i:s');
-    // }
+    public function getTanggalAttribute($value)
+    {
+        return Carbon::parse($value)->translatedFormat('l, d F Y H:i:s');
+    }
 }
