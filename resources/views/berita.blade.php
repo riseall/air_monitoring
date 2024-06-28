@@ -12,7 +12,7 @@
                         <div class="p-8">
                             <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
                                 {{ $article['title'] }}</div>
-                            <p class="mt-2 text-gray-500">{{ $article['content'] }}</p>
+                            <p class="mt-2 text-gray-500">{{ $article['description'] }}</p>
                             <a href="{{ $article['url'] }}" class="block mt-4 text-blue-500 hover:text-blue-700">Read
                                 more</a>
                         </div>

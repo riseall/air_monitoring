@@ -30,6 +30,6 @@ class GNewsService
 
     public function getAQINews($lang = 'en', $country = 'us', $max = 30)
     {
-        return $this->getNews('air quality index', $lang, $country, $max);
+        return $this->getNews('air pollution monitoring', $lang, $country, $max);
     }
 }
