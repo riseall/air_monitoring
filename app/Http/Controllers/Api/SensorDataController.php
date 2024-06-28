@@ -26,7 +26,7 @@ class SensorDataController extends Controller
     {
         $data = SensorData::latest('id')->first(); // Mengambil semua data sensor terbaru
 
-        return view('test', compact('data'));
+        return view('dashboard', compact('data'));
     }
 
     public function store(Request $request)
