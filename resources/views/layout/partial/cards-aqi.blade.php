@@ -1,5 +1,5 @@
-<div class="flex flex-wrap my-6 md:my-1 -mx-3">
-    <div class="w-full max-w-full px-3 mt-0 mb-6 md:mb-0 md:w-full md:flex-none lg:w-full lg:flex-none">
+<div class="flex flex-wrap">
+    <div class="w-full max-w-full mt-0 mb-6 md:mb-0 md:w-full md:flex-none lg:w-full lg:flex-none">
         @php
             $category = '';
             $bgColor = '';
@@ -43,22 +43,22 @@
                 $image = './assets/img/aqi/hazardous_image.png';
             }
         @endphp
-        <div class="p-6 rounded-lg shadow-md {{ $bgColor }}">
+        <div class="p-4 rounded-tl-lg shadow-md {{ $bgColor }}">
             <div class="flex">
                 <div class="text-center w-1/5">
-                    <div class="flex flex-col p-3 {{ $bgCard }} text-white/85 rounded-md">
-                        <p class="text-xl text-start font-mono font-thin">AQI</p>
-                        <p class="text-5xl font-serif font-medium">{{ $data->aqi }}</p>
+                    <div class="flex flex-col p-2 {{ $bgCard }} text-white/85 rounded-md">
+                        <p class="text-lg text-start font-mono font-thin">AQI</p>
+                        <p class="text-4xl font-serif font-medium">{{ $data->aqi }}</p>
                     </div>
                 </div>
-                <div class="w-3/5">
-                    <div class="flex flex-col p-3 px-5 {{ $textColor }}">
+                <div class="w-3/5 md:w-auto">
+                    <div class="flex flex-col p-2 px-6 {{ $textColor }}">
                         <p class="text-xl font-semibold font-mono">AQI CATEGORY</p>
-                        <p class="lg:text-4xl text-3xl -my-4 font-bold">{{ $category }}</p>
+                        <p class="lg:text-3xl text-2xl -my-4 font-bold">{{ $category }}</p>
                     </div>
                 </div>
                 <div class="flex w-1/5">
-                    <img src="{{ $image }}" alt="{{ $category }}" class="h-30 w-32 mx-auto">
+                    <img src="{{ $image }}" alt="{{ $category }}" class="h-30 w-30 mx-auto">
                 </div>
             </div>
         </div>
