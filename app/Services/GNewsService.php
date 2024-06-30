@@ -15,7 +15,7 @@ class GNewsService
         $this->baseUrl = 'https://gnews.io/api/v4';
     }
 
-    public function getNews($query, $lang = 'en', $country = 'us', $max = 30)
+    public function getNews($query, $lang = 'en', $country = 'us', $max = 6)
     {
         $response = Http::get("{$this->baseUrl}/search", [
             'q' => $query,
@@ -28,7 +28,7 @@ class GNewsService
         return $response->json();
     }
 
-    public function getAQINews($lang = 'en', $country = 'us', $max = 30)
+    public function getAQINews($lang = 'en', $country = 'us', $max = 6)
     {
         return $this->getNews('air pollution monitoring', $lang, $country, $max);
     }
