@@ -1,27 +1,37 @@
 // setup block for temperature
+const ctxTemp = document.getElementById("myTemp").getContext("2d");
+const gradientTemp = ctxTemp.createLinearGradient(0, 30, 70, 150);
+gradientTemp.addColorStop(0, "#fad961");
+gradientTemp.addColorStop(1, "#f76b1c");
+
 const dataTemp = window.chartData.dataTemp;
-const bgcTemp = ["rgb(210, 100, 154)", "rgb(202, 230, 178)"];
+const bgcTemp = [gradientTemp, "rgba(255, 99, 132, 0.2)"];
 const dataT = {
     datasets: [
         {
             data: dataTemp,
             backgroundColor: bgcTemp,
-            borderWidth: 1,
-            cutout: "70%",
+            borderWidth: 0,
+            cutout: "87%",
         },
     ],
 };
 
 // setup block for humidity
+const ctxHumi = document.getElementById("myHumi").getContext("2d");
+const gradientHumi = ctxHumi.createLinearGradient(0, 30, 70, 30);
+gradientHumi.addColorStop(0, "#7922e5");
+gradientHumi.addColorStop(1, "#1579ff");
+
 const dataHumi = window.chartData.dataHumi;
-const bgcHumi = ["rgb(98, 149, 162)", "rgb(202, 230, 178)"];
+const bgcHumi = [gradientHumi, "rgba(54, 162, 235, 0.2)"];
 const dataH = {
     datasets: [
         {
             data: dataHumi,
             backgroundColor: bgcHumi,
-            borderWidth: 1,
-            cutout: "70%",
+            borderWidth: 0,
+            cutout: "87%",
         },
     ],
 };
@@ -32,7 +42,7 @@ const counter = {
     beforeDraw(chart, args, options) {
         const {
             ctx,
-            chartArea: { top, right, bottom, left, width, height },
+            chartArea: { width, height },
         } = chart;
         ctx.save();
         ctx.font = options.fontSize + "px " + options.fontFamily;
@@ -59,10 +69,10 @@ const configTemp = {
                 enabled: false,
             },
             counter: {
-                fontColor: bgcTemp[0],
-                fontSize: 17,
-                fontFamily: "mono",
-                unit: " °C",
+                fontColor: gradientTemp,
+                fontSize: 15,
+                fontFamily: "serif",
+                unit: "°C",
             },
         },
     },
@@ -82,10 +92,10 @@ const configHumi = {
                 enabled: false,
             },
             counter: {
-                fontColor: bgcHumi[0],
-                fontSize: 17,
-                fontFamily: "mono",
-                unit: " %",
+                fontColor: gradientHumi,
+                fontSize: 15,
+                fontFamily: "serif",
+                unit: "%",
             },
         },
     },
