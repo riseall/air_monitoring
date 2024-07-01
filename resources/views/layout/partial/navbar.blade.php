@@ -24,7 +24,7 @@
                                <x-dropdown align="right" width="48">
                                    <x-slot name="trigger">
                                        <button
-                                           class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-slate-700 dark:text-gray-400 bg-transparent dark:bg-gray-800 hover:text-slate-600 dark:hover:text-slate-500 focus:outline-none transition ease-in-out duration-150">
+                                           class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-slate-700 bg-transparent hover:text-slate-600 focus:outline-none transition ease-in-out duration-150">
                                            <i class="fa fa-user mr-2"></i>
                                            {{-- <div>{{ Auth::user()->name }}</div> --}}
 
@@ -40,12 +40,12 @@
                                    </x-slot>
 
                                    <x-slot name="content">
-                                       <x-dropdown-link :href="route('profile.edit')">
+                                       {{-- <x-dropdown-link :href="route('profile.edit')">
                                            {{ __('Profile') }}
-                                       </x-dropdown-link>
+                                       </x-dropdown-link> --}}
 
                                        <!-- Authentication -->
-                                       <form method="POST" action="{{ route('logout') }}">
+                                       {{-- <form method="POST" action="{{ route('logout') }}">
                                            @csrf
 
                                            <x-dropdown-link :href="route('logout')"
@@ -53,7 +53,7 @@
                                                 this.closest('form').submit();">
                                                {{ __('Log Out') }}
                                            </x-dropdown-link>
-                                       </form>
+                                       </form> --}}
                                    </x-slot>
                                </x-dropdown>
                            </div>
