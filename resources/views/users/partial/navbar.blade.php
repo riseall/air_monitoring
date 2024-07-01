@@ -13,22 +13,35 @@
                 </a>
             </nav>
 
-            <div class="flex flex-row gap-8 text-slate-700 text-sm">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
+            <div class="flex flex-row gap-8 text-slate-800 hover:text-slate-500 text-sm">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
             </div>
 
             <div>
                 <ul class="flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
-                    <li class="flex items-center">
-                        <a href="./pages/sign-in.html"
-                            class="block px-0 py-2 text-sm font-semibold transition-all ease-nav-brand text-slate-500">
-                            <i class="fa fa-user sm:mr-1"></i>
-                            <span class="hidden sm:inline">Sign In</span>
-                        </a>
-                    </li>
-                    <li class="flex items-center pl-4 xl:hidden">
+                    @if (Route::has('login'))
+                        <nav class="-mx-3 flex flex-1 justify-end">
+                            @auth
+                                <i class="fa fa-user sm:mr-1"></i>
+                                <div>{{ Auth::user()->name }}</div>
+                            @else
+                                <a href="{{ route('login') }}"
+                                    class="rounded-md px-3 py-2 text-black ring-1 ring-transparent text-sm transition hover:text-black/70 hover:text-slate-500 focus:outline-none focus-visible:ring-[#FF2D20] ">
+                                    <span class="hidden sm:inline">Sign In</span>
+                                </a>
+
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent text-sm transition hover:text-black/70 hover:text-slate-500 focus:outline-none focus-visible:ring-[#FF2D20]">
+                                        Register
+                                    </a>
+                                @endif
+                            @endauth
+                        </nav>
+                    @endif
+                    {{-- <li class="flex items-center pl-4 xl:hidden">
                         <a href="javascript:;" class="block p-0 text-sm transition-all ease-nav-brand text-slate-500"
                             sidenav-trigger>
                             <div class="w-4.5 overflow-hidden">
@@ -39,7 +52,7 @@
                                 <i class="ease-soft relative block h-0.5 rounded-sm bg-slate-500 transition-all"></i>
                             </div>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
