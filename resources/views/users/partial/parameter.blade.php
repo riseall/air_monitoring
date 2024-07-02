@@ -13,7 +13,7 @@
                                         <i
                                             class="text-sm leading-normal font-weight-bolder text-lime-500">ug/m<sup>3</sup></i>
                                     </div>
-                                    <span class="textpar">PM<sub>2.5</sub></span>
+                                    <span class="textpar">PM2.5</span>
                                 </div>
                                 <div class="cardpar">
                                     <img src="./assets/img/parameter/co2.png" alt="CO2" class="h-10 w-10">
