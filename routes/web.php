@@ -33,6 +33,9 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/profuser', [ProfileController::class, 'editUser'])->name('profile.user.edit');
+    Route::patch('/profuser', [ProfileController::class, 'updateUser'])->name('profile.user.update');
+    Route::delete('/profuser', [ProfileController::class, 'destroyUser'])->name('profile.user.destroy');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
