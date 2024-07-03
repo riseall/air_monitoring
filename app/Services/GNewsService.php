@@ -1,35 +1,35 @@
 <?php
 
-namespace App\Services;
+// namespace App\Services;
 
-use Illuminate\Support\Facades\Http;
+// use Illuminate\Support\Facades\Http;
 
-class GNewsService
-{
-    protected $apiKey;
-    protected $baseUrl;
+// class GNewsService
+// {
+//     protected $apiKey;
+//     protected $baseUrl;
 
-    public function __construct()
-    {
-        $this->apiKey = env('GNEWS_API_KEY');
-        $this->baseUrl = 'https://gnews.io/api/v4';
-    }
+//     public function __construct()
+//     {
+//         $this->apiKey = env('GNEWS_API_KEY');
+//         $this->baseUrl = 'https://gnews.io/api/v4';
+//     }
 
-    public function getNews($query, $lang = 'en', $country = 'us', $max = 6)
-    {
-        $response = Http::get("{$this->baseUrl}/search", [
-            'q' => $query,
-            'lang' => $lang,
-            'country' => $country,
-            'max' => $max,
-            'token' => $this->apiKey,
-        ]);
+//     public function getNews($query, $lang = 'en', $country = 'us', $max = 6)
+//     {
+//         $response = Http::get("{$this->baseUrl}/search", [
+//             'q' => $query,
+//             'lang' => $lang,
+//             'country' => $country,
+//             'max' => $max,
+//             'token' => $this->apiKey,
+//         ]);
 
-        return $response->json();
-    }
+//         return $response->json();
+//     }
 
-    public function getAQINews($lang = 'en', $country = 'us', $max = 6)
-    {
-        return $this->getNews('air pollution monitoring', $lang, $country, $max);
-    }
-}
+//     public function getAQINews($lang = 'en', $country = 'us', $max = 6)
+//     {
+//         return $this->getNews('air pollution monitoring', $lang, $country, $max);
+//     }
+// }

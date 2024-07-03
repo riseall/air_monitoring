@@ -5,19 +5,20 @@ namespace App\Http\Controllers;
 use App\Models\SensorData;
 use App\Services\GNewsService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class NewsController extends Controller
 {
-    protected $gnewsService;
+    // protected $gnewsService;
 
-    public function __construct(GNewsService $gnewsService)
-    {
-        $this->gnewsService = $gnewsService;
-    }
+    // public function __construct(GNewsService $gnewsService)
+    // {
+    //     $this->gnewsService = $gnewsService;
+    // }
 
     public function index(Request $request)
     {
-        $news = $this->gnewsService->getAQINews();
+        //$news = $this->gnewsService->getAQINews();
         $data = SensorData::latest('id')->first(); // Mengambil semua data sensor terbaru
 
         $latestTemperature = $data->temperature;
@@ -33,16 +34,7 @@ class NewsController extends Controller
             100 - $latestHumidity // 100 minus the latest humidity
         ];
 
-        return view('user-das', compact('data', 'news', 'dataTemp', 'dataHumi'));
-    }
-
-
-    public function search(Request $request)
-    {
-        $query = $request->input('query', 'latest');
-        $max = $request->input('max', 30); // default to 30 if not provided
-        $news = $this->gnewsService->getNews($query, 'en', 'us', $max);
-
-        return view('user-das', compact('news'));
+        // add 'news' >
+        return view('welcome', compact('data', 'dataTemp', 'dataHumi'));
     }
 }
