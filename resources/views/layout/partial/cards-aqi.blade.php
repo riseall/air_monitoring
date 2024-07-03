@@ -1,5 +1,6 @@
 <div class="flex flex-wrap">
-    <div class="w-full max-w-full mt-0 mb-6 md:mb-0 md:w-full md:flex-none lg:w-full lg:flex-none">
+    <div
+        class="w-full max-w-full mt-0 mb-6 lg:rounded-tl-lg rounded-t-lg md:mb-0 md:w-full md:flex-none lg:w-full lg:flex-none overflow-hidden">
         @php
             $category = '';
             $bgColor = '';
@@ -43,7 +44,7 @@
                 $image = './assets/img/aqi/hazardous_image.png';
             }
         @endphp
-        <div class="p-4 rounded-tl-lg shadow-md {{ $bgColor }}">
+        <div class="p-4 shadow-md {{ $bgColor }}">
             <div class="flex">
                 <div class="text-center w-1/5">
                     <div class="flex flex-col p-2 {{ $bgCard }} text-white/85 rounded-md">

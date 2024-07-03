@@ -212,6 +212,3 @@
         </div>
     </div>
 </div>
-<script>
-    var dataBaruUrl = "{{ route('new.data') }}";
-</script>

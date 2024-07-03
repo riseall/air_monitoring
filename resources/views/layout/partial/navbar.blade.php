@@ -26,7 +26,7 @@
                                        <button
                                            class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-slate-700 bg-transparent hover:text-slate-600 focus:outline-none transition ease-in-out duration-150">
                                            <i class="fa fa-user mr-2"></i>
-                                           {{-- <div>{{ Auth::user()->name }}</div> --}}
+                                           <div>{{ Auth::user()->name }}</div>
 
                                            <div class="ms-1">
                                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@
                                        </x-dropdown-link> --}}
 
                                        <!-- Authentication -->
-                                       {{-- <form method="POST" action="{{ route('logout') }}">
+                                       <form method="POST" action="{{ route('logout') }}">
                                            @csrf
 
                                            <x-dropdown-link :href="route('logout')"
@@ -53,7 +53,7 @@
                                                 this.closest('form').submit();">
                                                {{ __('Log Out') }}
                                            </x-dropdown-link>
-                                       </form> --}}
+                                       </form>
                                    </x-slot>
                                </x-dropdown>
                            </div>

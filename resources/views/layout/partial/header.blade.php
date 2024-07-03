@@ -18,7 +18,7 @@
             <ul class="flex flex-col pl-0 mb-0">
                 <li class="mt-0.5 w-full">
                     <a class="group py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap transition-colors px-4 hover:px-4 hover:transition hover:shadow-lg hover:rounded-lg hover:bg-white hover:font-semibold hover:text-slate-700 hover:ease-in-out hover:duration-100"
-                        href="/" data-page="Dashboard">
+                        href="/dashboard" data-page="Dashboard">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
                             <i class="fa fa-home text-xs text-slate-800 group-hover:text-white"></i>
@@ -36,9 +36,9 @@
                         href="/user" data-page="User">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <i class="fa fa-table text-xs text-slate-800 group-hover:text-white"></i>
+                            <i class="fa fa-users text-xs text-slate-800 group-hover:text-white"></i>
                         </div>
-                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">User</span>
+                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Users</span>
                     </a>
                 </li>
 
@@ -53,24 +53,13 @@
                     </a>
                 </li>
 
-                <li class="mt-0.5 w-full">
-                    <a class="group py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap transition-colors px-4 hover:px-4 hover:transition hover:shadow-lg hover:rounded-lg hover:bg-white hover:font-semibold hover:text-slate-700 hover:ease-in-out hover:duration-100"
-                        href="/news" data-page="News">
-                        <div
-                            class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <i class="fa fa-newspaper-o text-xs text-slate-800 group-hover:text-white"></i>
-                        </div>
-                        <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">News</span>
-                    </a>
-                </li>
-
                 <li class="w-full mt-4">
                     <h6 class="pl-6 ml-2 text-xs font-bold leading-tight uppercase opacity-60">Account pages</h6>
                 </li>
 
                 <li class="mt-0.5 w-full">
                     <a class="group py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap transition-colors px-4 hover:px-4 hover:transition hover:shadow-lg hover:rounded-lg hover:bg-white hover:font-semibold hover:text-slate-700 hover:ease-in-out hover:duration-100"
-                        {{-- href="{{ route('profile.edit') }}" --}} data-page="Profile">
+                        href="{{ route('profile.edit') }}" data-page="Profile">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
                             <i class="text-xs text-slate-800 group-hover:text-white fa fa-user" aria-hidden="true"></i>
