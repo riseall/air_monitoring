@@ -11,7 +11,7 @@
     @include('layout.partial.link')
 </head>
 
-<body class="m-0 font-sans text-base antialiased font-normal leading-default bg-rose-50/20 text-slate-500">
+<body class="m-0 font-sans text-base antialiased font-normal leading-default bg-rose-100/20 text-slate-500">
 
     @include('users.partial.navbar')
 
