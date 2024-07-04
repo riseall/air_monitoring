@@ -7,7 +7,7 @@ use App\Models\SensorData;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Yajra\DataTables\DataTables;
+use GuzzleHttp\Client;
 
 class SensorDataController extends Controller
 {
@@ -63,5 +63,42 @@ class SensorDataController extends Controller
             Log::error('Failed to save data:', ['error' => $e->getMessage()]);
             return response()->json(['message' => 'Failed to save data'], 500);
         }
+    }
+
+    public function getPrediction(Request $request)
+    {
+        $client = new Client();
+        $response = $client->post('http://localhost:5000/predict', [
+            'json' => [
+                'co2' => $request->input('co2'),
+                'no2' => $request->input('no2'),
+                'co' => $request->input('co'),
+                'benzene' => $request->input('benzene'),
+                'toluene' => $request->input('toluene'),
+                'pm25' => $request->input('pm25'),
+                'temperature' => $request->input('temperature'),
+                'humidity' => $request->input('humidity')
+            ]
+        ]);
+
+        $body = $response->getBody();
+        $result = json_decode($body, true);
+
+        // Menyimpan nilai AQI dan kategori ke database
+        $sensor = new SensorData();
+        $sensor->tanggal = Carbon::now()->input('tanggal');
+        $sensor->co2 = $request->input('co2');
+        $sensor->no2 = $request->input('no2');
+        $sensor->co = $request->input('co');
+        $sensor->benzene = $request->input('benzene');
+        $sensor->toluene = $request->input('toluene');
+        $sensor->pm25 = $request->input('pm25');
+        $sensor->temp = $request->input('temperature');
+        $sensor->humidity = $request->input('humidity');
+        $sensor->aqi = $result['aqi'];
+        $sensor->category = $result['category'];
+        $sensor->save();
+
+        return response()->json($result);
     }
 }
