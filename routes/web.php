@@ -50,4 +50,6 @@ Route::post('/contact', [ContactController::class, 'send'])->name('contact.send'
 
 Route::get('/', [NewsController::class, 'index'])->name('welcome');
 
+Route::post('/predict', [SensorDataController::class, 'getPrediction']);
+
 require __DIR__ . '/auth.php';
