@@ -63,8 +63,7 @@
                                 <div
                                     class="px-1 pt-0 text-center bg-transparent border-t-0 border-t-solid rounded-b-2xl lg:px-2">
                                     <p class="mt-4 mb-0  leading-normal text-sm">Already have an account? <a
-                                            href="{{ route('login') }}" class="font-bold text-slate-700">Sign
-                                            in</a>
+                                            href="{{ route('login') }}" class="font-bold text-slate-700">Login</a>
                                     </p>
                                 </div>
                             </form>
