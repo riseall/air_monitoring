@@ -62,7 +62,7 @@
                             @else
                                 <a href="{{ route('login') }}"
                                     class="rounded-md px-3 py-2 text-black ring-1 ring-transparent text-sm transition hover:text-black/70 hover:text-slate-500 focus:outline-none focus-visible:ring-[#FF2D20] ">
-                                    <span class="hidden sm:inline">Sign In</span>
+                                    <span class="hidden sm:inline">Login</span>
                                 </a>
 
                                 @if (Route::has('register'))

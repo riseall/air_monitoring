@@ -19,14 +19,7 @@ class UserController extends Controller
     {
         if ($request->ajax()) {
             $data = User::select(['id', 'name', 'email']);
-            return Datatables::of($data)
-                ->addIndexColumn()
-                ->addColumn('action', function ($row) {
-                    $btn = '<a href="javascript:void(0)" data-id="' . $row->id . '" class="edit bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Edit</a>';
-                    $btn .= ' <a href="javascript:void(0)" data-id="' . $row->id . '" class="delete bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Delete</a>';
-                    return $btn;
-                })
-                ->rawColumns(['action'])
+            return datatables()->of($data)
                 ->make(true);
         }
     }
