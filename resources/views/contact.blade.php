@@ -47,6 +47,9 @@
                         </button>
                     </div>
                 </form>
+                @if (session('success'))
+                    <p>{{ session('success') }}</p>
+                @endif
             </div>
         </div>
     </div>

@@ -26,8 +26,10 @@
                 </div>
             </div>
 
-            {{-- Grafik --}}
-            @include('layout.partial.grafik')
+            @auth
+                {{-- Grafik --}}
+                @include('layout.partial.grafik')
+            @endauth
 
             {{-- Berita --}}
             {{-- @include('users.partial.berita') --}}

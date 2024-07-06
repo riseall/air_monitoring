@@ -24,6 +24,8 @@
                                 <th>PM2.5</th>
                                 <th>Temperature</th>
                                 <th>Humidity</th>
+                                <th>AQI</th>
+                                <th>Category</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,6 +82,14 @@
                     {
                         data: "humidity",
                         name: "humidity"
+                    },
+                    {
+                        data: "aqi",
+                        name: "aqi"
+                    },
+                    {
+                        data: "category",
+                        name: "category"
                     },
                 ],
             });
