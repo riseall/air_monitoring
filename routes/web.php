@@ -6,6 +6,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -43,7 +44,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/user-data', [UserController::class, 'getUserData'])->name('user.data');
 Route::get('/data', [SensorDataController::class, 'index'])->name('data');
-Route::get('/dashboard', [SensorDataController::class, 'newData'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [SensorDataController::class, 'newData'])->middleware(['auth', 'verified', AdminMiddleware::class])->name('dashboard');
 Route::get('/chart1/data', [ChartController::class, 'getBar'])->name('chart1.data');
 Route::get('/chart/data', [ChartController::class, 'getData'])->name('chart.data');
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
