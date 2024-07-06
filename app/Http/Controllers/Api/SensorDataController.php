@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Events\SensorDataUpdated;
 use App\Http\Controllers\Controller;
 use App\Models\SensorData;
 use Carbon\Carbon;
@@ -46,7 +47,7 @@ class SensorDataController extends Controller
 
         try {
             // Simpan data ke database
-            SensorData::create([
+            $sensorData = SensorData::create([
                 'tanggal' => Carbon::now(),
                 'co2' => $validated['co2'],
                 'no2' => $validated['no2'],
@@ -57,6 +58,8 @@ class SensorDataController extends Controller
                 'temperature' => $validated['temperature'],
                 'humidity' => $validated['humidity'],
             ]);
+
+            event(new SensorDataUpdated($sensorData));
 
             return response()->json(['message' => 'Data saved successfully'], 201);
         } catch (\Exception $e) {
