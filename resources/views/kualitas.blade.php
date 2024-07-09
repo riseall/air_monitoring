@@ -22,8 +22,8 @@
                                 <th>Benzene</th>
                                 <th>Toluene</th>
                                 <th>PM2.5</th>
-                                <th>Temperature</th>
-                                <th>Humidity</th>
+                                <th>Temp</th>
+                                <th>Humi</th>
                                 <th>AQI</th>
                                 <th>Category</th>
                             </tr>
