@@ -6,6 +6,7 @@
             <div class="w-full max-w-full mt-0 py-6 pt-2">
                 @include('users.partial.parameter')
             </div>
+
             <div class="flex flex-wrap">
                 {{-- Card AQI --}}
                 <div class="w-full lg:w-2/3">
@@ -25,7 +26,6 @@
                     </div>
                 </div>
             </div>
-
             @auth
                 {{-- Grafik --}}
                 @include('layout.partial.grafik')

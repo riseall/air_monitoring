@@ -54,7 +54,7 @@
                 </div>
                 <div class="w-3/5 md:w-auto">
                     <div class="flex flex-col p-2 px-6 {{ $textColor }}">
-                        <p class="text-xl font-semibold font-mono">AQI CATEGORY</p>
+                        <p class="text-xl font-semibold font-mono">KATEGORI INDEKS KUALITAS UDARA</p>
                         <p class="lg:text-3xl text-2xl -my-4 font-bold">{{ $category }}</p>
                     </div>
                 </div>

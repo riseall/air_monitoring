@@ -12,7 +12,7 @@
                     $recommendations = [
                         [
                             'icon' => 'ic-health-sport-green.svg',
-                            'text' => 'Nikmati aktivitas outdoor',
+                            'text' => 'Nikmati aktivitas luar ruangan',
                         ],
                         [
                             'icon' => 'ic-health-window-green.svg',
@@ -25,7 +25,7 @@
                     $recommendations = [
                         [
                             'icon' => 'ic-health-sport-yellow.svg',
-                            'text' => 'Kelompok sensitif sebaiknya mengurangi aktivitas',
+                            'text' => 'Kelompok sensitif sebaiknya mengurangi aktivitas luar ruangan',
                         ],
                         [
                             'icon' => 'ic-health-window-yellow.svg',
@@ -33,11 +33,11 @@
                         ],
                         [
                             'icon' => 'ic-health-mask-yellow.svg',
-                            'text' => 'Kelompok sensitif sebaiknya memakai masker di luar',
+                            'text' => 'Kelompok sensitif sebaiknya memakai masker ketika keluar',
                         ],
                         [
                             'icon' => 'ic-health-airpurifier-yellow.svg',
-                            'text' => 'Kelompok sensitif harus memulai pembersih udara',
+                            'text' => 'Kelompok sensitif harus mulai menyalakan penyaring udara',
                         ],
                     ];
                 } elseif ($data->aqi <= 150) {
@@ -54,7 +54,7 @@
                         ],
                         [
                             'icon' => 'ic-health-mask-orange.svg',
-                            'text' => 'Kelompok sensitif sebaiknya memakai masker di luar',
+                            'text' => 'Kelompok sensitif sebaiknya memakai masker ketika keluar',
                         ],
                         [
                             'icon' => 'ic-health-airpurifier-orange.svg',
@@ -75,7 +75,7 @@
                         ],
                         [
                             'icon' => 'ic-health-mask-red.svg',
-                            'text' => 'Kenakan masker di luar',
+                            'text' => 'Kenakan masker ketika keluar',
                         ],
                         [
                             'icon' => 'ic-health-airpurifier-red.svg',
@@ -96,7 +96,7 @@
                         ],
                         [
                             'icon' => 'ic-health-mask-purple.svg',
-                            'text' => 'Kenakan masker di luar',
+                            'text' => 'Kenakan masker ketika keluar',
                         ],
                         [
                             'icon' => 'ic-health-airpurifier-purple.svg',
@@ -117,7 +117,7 @@
                         ],
                         [
                             'icon' => 'ic-health-mask-maroon.svg',
-                            'text' => 'Kenakan masker di luar',
+                            'text' => 'Kenakan masker ketika keluar',
                         ],
                         [
                             'icon' => 'ic-health-airpurifier-maroon.svg',

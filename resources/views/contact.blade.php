@@ -2,7 +2,7 @@
 @section('content')
     <div class="w-full px-6 py-8 mx-auto">
         <div class="px-16">
-            <div class="my-3 p-10 bg-white rounded-lg shadow-lg">
+            <div class="my-3 p-10 bg-white/65 rounded-lg shadow-lg">
                 <h1 class="text-3xl font-bold mb-4">Hubungi Kami</h1>
                 <p class="mb-4">
                     Kami sangat menghargai masukan dan pertanyaan dari pengguna kami. Jika Anda memiliki pertanyaan,
@@ -16,7 +16,7 @@
                 </p>
             </div>
 
-            <div class="my-3 p-10 bg-white rounded-lg shadow-lg  flex flex-col justify-center">
+            <div class="my-3 p-10 bg-white/65 rounded-lg shadow-lg  flex flex-col justify-center">
                 <p class="mb-4">
                     Atau Anda dapat mengisi formulir kontak di bawah ini dan kami akan segera menghubungi Anda.
                 </p>
