@@ -23,7 +23,8 @@ class SensorData extends Model
         'temperature',
         'humidity',
         'aqi',
-        'category'
+        'category',
+        'created_at'
     ];
 
     protected $dates = ['tanggal'];
