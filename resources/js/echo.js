@@ -5,12 +5,17 @@ window.Pusher = Pusher;
 
 window.Echo = new Echo({
     broadcaster: "pusher",
-    key: "d3af0eeaaf6a48c2b9a9",
-    cluster: "ap1",
+    key: import.meta.env.VITE_PUSHER_APP_KEY,
+    cluster: import.meta.env.VITE_PUSHER_APP_CLUSTER,
+    forceTLS: true,
     encrypted: true,
 });
 
-window.Echo.channel("sensor-data").listen("SensorDataUpdated", (e) => {
-    console.log(e.sensorData);
-    // Update UI dengan data sensor baru
+console.log(import.meta.env.VITE_PUSHER_APP_KEY);
+console.log(import.meta.env.VITE_PUSHER_APP_CLUSTER);
+
+window.Echo.channel("sensor-data").listen("SensorDataUpdated", (event) => {
+    console.log("Data sensor diperbarui:", event.sensorData);
+    // Lakukan refresh data di halaman atau perbarui state
+    location.reload();
 });
