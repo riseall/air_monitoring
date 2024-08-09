@@ -4,27 +4,27 @@ Proyek ini adalah sistem pemantauan kualitas udara yang dibangun menggunakan Lar
 
 ## Daftar Isi
 
-- [Persyaratan](#persyaratan)
-- [Instalasi](#instalasi)
-- [Konfigurasi](#konfigurasi)
-- [Menjalankan Proyek](#menjalankan-proyek)
-- [Struktur Proyek](#struktur-proyek)
-- [Integrasi Python](#integrasi-python)
-- [Migrasi Database](#migrasi-database)
-- [Kontribusi](#kontribusi)
-- [Lisensi](#lisensi)
+-   [Persyaratan](#persyaratan)
+-   [Instalasi](#instalasi)
+-   [Konfigurasi](#konfigurasi)
+-   [Menjalankan Proyek](#menjalankan-proyek)
+-   [Struktur Proyek](#struktur-proyek)
+-   [Integrasi Python](#integrasi-python)
+-   [Kontribusi](#kontribusi)
+-   [Lisensi](#lisensi)
 
 ## Persyaratan
 
 Sebelum memulai, pastikan perangkat Anda memiliki:
-- **PHP >= 8.2**
-- **Composer**
-- **MySQL**
-- **Python 3.x**
-- **Pip** (Python package installer)
-- **Laravel 11**
-- **Virtualenv** (opsional, untuk mengelola lingkungan Python)
-- **Node.js dan npm** (untuk frontend jika diperlukan)
+
+-   **PHP >= 8.2**
+-   **Composer**
+-   **MySQL**
+-   **Python 3.x**
+-   **Pip** (Python package installer)
+-   **Laravel 11**
+-   **Virtualenv** (opsional, untuk mengelola lingkungan Python)
+-   **Node.js dan npm** (untuk frontend jika diperlukan)
 
 ## Instalasi
 
@@ -63,6 +63,7 @@ pip install flask joblib mysql-connector-python scikit-learn
 ## Konfigurasi
 
 ### 1. Konfigurasi Environment Laravel
+
 Salin file .env.example menjadi .env:
 
 ```bash
@@ -81,17 +82,29 @@ DB_PASSWORD=password
 ```
 
 ### 2. Konfigurasi Environment Python
+
 Pastikan file konfigurasi Flask (config.py atau lainnya) sudah dikonfigurasi dengan benar, terutama untuk koneksi ke MySQL.
 
 ## Menjalankan Proyek
+
 ### 1. Menjalankan Laravel
 
 ```bash
 php artisan key:generate
-php artisan migrate
 php artisan serve
 ```
+
 Laravel akan berjalan di http://localhost:8000.
+
+## Migrasi Database
+
+Untuk menjalankan migrasi database, gunakan perintah berikut:
+
+```bash
+php artisan migrate --seed
+```
+
+Ini akan membuat tabel yang diperlukan dalam database MySQL Anda.
 
 ### 2. Menjalankan Flask
 
@@ -101,8 +114,8 @@ python app.py
 
 ## Struktur Proyek
 
-- **Laravel**: Aplikasi utama berbasis web dengan Laravel 11.
-- **Python Backend**: Direktori yang berisi script Python untuk pemrosesan data, integrasi model Scikit-Learn, dan API Flask.
+-   **Laravel**: Aplikasi utama berbasis web dengan Laravel 11.
+-   **Python Backend**: Direktori yang berisi script Python untuk pemrosesan data, integrasi model Scikit-Learn, dan API Flask.
 
 ## Integrasi Python
 
@@ -123,6 +136,7 @@ $result = json_decode($response->getBody(), true);
 ```
 
 ### Menggunakan Model yang Disimpan
+
 Model Scikit-Learn disimpan menggunakan joblib dan dimuat dalam aplikasi Flask saat dipanggil oleh Laravel:
 
 ```python
@@ -133,16 +147,10 @@ def predict(data):
     return model.predict([data])
 ```
 
-## Migrasi Database
-Untuk menjalankan migrasi database, gunakan perintah berikut:
-
-```bash
-php artisan migrate
-```
-Ini akan membuat tabel yang diperlukan dalam database MySQL Anda.
-
 ## Kontribusi
+
 Kontribusi sangat diterima! Jika Anda ingin berkontribusi, silakan fork repository ini, buat branch baru, dan kirim pull request.
 
 ## Lisensi
+
 Proyek ini dilisensikan di bawah lisensi MIT. Lihat file LICENSE untuk informasi lebih lanjut.
