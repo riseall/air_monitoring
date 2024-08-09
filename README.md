@@ -50,7 +50,8 @@ npm install
 ### 4. Instal Dependensi Python
 
 ```bash
-npm install
+python3 -m venv venv
+source venv/bin/activate
 ```
 
 Instal dependensi Python yang dibutuhkan:
