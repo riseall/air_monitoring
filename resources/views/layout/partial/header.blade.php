@@ -21,7 +21,8 @@
                         href="/dashboard" data-page="Dashboard">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <i class="fa fa-home text-xs text-slate-800 group-hover:text-white"></i>
+                            <img class="h-5 text-slate-800 group-hover:text-white"
+                                src="{{ asset('assets/img/home.png') }}" />
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
                     </a>
@@ -36,7 +37,8 @@
                         href="/user" data-page="User">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <i class="fa fa-users text-xs text-slate-800 group-hover:text-white"></i>
+                            <img class="h-5 text-slate-800 group-hover:text-white"
+                                src="{{ asset('assets/img/user.png') }}" />
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Users</span>
                     </a>
@@ -47,7 +49,8 @@
                         href="/kualitas" data-page="Kualitas Udara">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <i class="fa fa-table text-xs text-slate-800 group-hover:text-white"></i>
+                            <img class="h-5 text-slate-800 group-hover:text-white"
+                                src="{{ asset('assets/img/air.png') }}" />
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Kualitas Udara</span>
                     </a>
@@ -62,7 +65,8 @@
                         href="{{ route('profile.edit') }}" data-page="Profile">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <i class="text-xs text-slate-800 group-hover:text-white fa fa-user" aria-hidden="true"></i>
+                            <img class="h-5 text-slate-800 group-hover:text-white"
+                                src="{{ asset('assets/img/profile.png') }}" />
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Profile</span>
                     </a>
