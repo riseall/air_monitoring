@@ -6,7 +6,7 @@
                 sidenav-close></i>
             <a class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-slate-700" href="/">
                 <img src="./assets/img/air-quality.png"
-                    class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-8" alt="main_logo" />
+                    class="inline h-full max-w-full transition-all duration-200 ease-nav-brand max-h-8" />
                 <span class="ml-1 font-bold text-nowrap transition-all duration-200 ease-nav-brand">Air Quality
                     Monitoring</span>
             </a>
@@ -21,8 +21,10 @@
                         href="/dashboard" data-page="Dashboard">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <img class="h-5 text-slate-800 group-hover:text-white"
-                                src="{{ asset('assets/img/home.png') }}" />
+                            <img class="h-5 group-hover:hidden"
+                                src="{{ asset(request()->is('dashboard') ? 'assets/img/home.png' : 'assets/img/home-gry.png') }}">
+                            <img class="h-5 hidden group-hover:block"
+                                src="{{ asset(request()->is('dashboard') ? 'assets/img/home-gry.png' : 'assets/img/home.png') }}">
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Dashboard</span>
                     </a>
@@ -37,8 +39,10 @@
                         href="/user" data-page="User">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <img class="h-5 text-slate-800 group-hover:text-white"
-                                src="{{ asset('assets/img/user.png') }}" />
+                            <img class="h-5 group-hover:hidden"
+                                src="{{ asset(request()->is('user') ? 'assets/img/user.png' : 'assets/img/user-gry.png') }}">
+                            <img class="h-5 hidden group-hover:block"
+                                src="{{ asset(request()->is('user') ? 'assets/img/user-gry.png' : 'assets/img/user.png') }}">
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Users</span>
                     </a>
@@ -49,8 +53,10 @@
                         href="/kualitas" data-page="Kualitas Udara">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <img class="h-5 text-slate-800 group-hover:text-white"
-                                src="{{ asset('assets/img/air.png') }}" />
+                            <img class="h-5 group-hover:hidden"
+                                src="{{ asset(request()->is('kualitas') ? 'assets/img/air.png' : 'assets/img/air-gry.png') }}">
+                            <img class="h-5 hidden group-hover:block"
+                                src="{{ asset(request()->is('kualitas') ? 'assets/img/air-gry.png' : 'assets/img/air.png') }}">
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Kualitas Udara</span>
                     </a>
@@ -65,8 +71,10 @@
                         href="{{ route('profile.edit') }}" data-page="Profile">
                         <div
                             class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5 group-hover:bg-gradient-to-tl group-hover:from-purple-700 group-hover:to-pink-500 group-hover:transition-all group-hover:ease-in-out group-hover:duration-100">
-                            <img class="h-5 text-slate-800 group-hover:text-white"
-                                src="{{ asset('assets/img/profile.png') }}" />
+                            <img class="h-5 group-hover:hidden"
+                                src="{{ asset(request()->is('profile.edit') ? 'assets/img/profile.png' : 'assets/img/profile-gry.png') }}">
+                            <img class="h-5 hidden group-hover:block"
+                                src="{{ asset(request()->is('profile.edit') ? 'assets/img/profile-gry.png' : 'assets/img/profile.png') }}">
                         </div>
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Profile</span>
                     </a>
