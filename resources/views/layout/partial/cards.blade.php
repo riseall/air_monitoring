@@ -151,7 +151,9 @@
                     <div class="px-3 text-right basis-1/3">
                         <div
                             class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                            <i class="fa leading-none fa-braille text-lg relative top-3.5 text-white"></i>
+                            <div class="h-full flex items-center justify-center">
+                                <img class="h-8 relative" src="{{ asset('assets/img/dust.png') }}" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -178,7 +180,9 @@
                     <div class="px-3 text-right basis-1/3">
                         <div
                             class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                            <i class="fa leading-none fa-thermometer-half text-lg relative top-3.5 text-white"></i>
+                            <div class="h-full flex items-center justify-center">
+                                <img class="h-7 relative" src="{{ asset('assets/img/term.png') }}" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -204,7 +208,9 @@
                     <div class="px-3 text-right basis-1/3">
                         <div
                             class="inline-block w-12 h-12 text-center rounded-lg bg-gradient-to-tl from-purple-700 to-pink-500">
-                            <i class="fa leading-none fa-snowflake-o text-lg relative top-3.5 text-white"></i>
+                            <div class="h-full flex items-center justify-center">
+                                <img class="h-7 relative" src="{{ asset('assets/img/ac.png') }}" />
+                            </div>
                         </div>
                     </div>
                 </div>
