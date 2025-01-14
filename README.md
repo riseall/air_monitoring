@@ -146,6 +146,22 @@ model = load('model.joblib')
 def predict(data):
     return model.predict([data])
 ```
+## Dokumentasi Website
+### 1. Register
+![register](https://github.com/user-attachments/assets/464b5470-64b8-43b0-a0a3-cdce7838577c)
+
+### 2. Login
+![login](https://github.com/user-attachments/assets/e09df8e3-565d-4229-be83-39c49850414b)
+
+### 3. Halaman Home
+![home client](https://github.com/user-attachments/assets/cf87648a-5d9d-4eaa-99bd-779cf133e729)
+![home client1](https://github.com/user-attachments/assets/927504fe-3be5-4782-b57e-2c58f03190ec)
+![home client2](https://github.com/user-attachments/assets/5b6998b5-5192-4b3f-9bbe-72f69fc1ed3c)
+
+### 4. Dashboard Admin
+![dash1](https://github.com/user-attachments/assets/ce5d8352-c556-4eb0-9a8f-4c912e8cacca)
+![dash usr](https://github.com/user-attachments/assets/277d8950-a881-4380-9923-19a9d4e8f0ff)
+![dash data](https://github.com/user-attachments/assets/b9877023-d697-40a4-9014-b29646830805)
 
 ## Kontribusi
 
